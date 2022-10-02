@@ -4,7 +4,7 @@ from discord.ext import commands
 import os
 from keep_alive import keep_alive
 
-token = "MTAyNTQyNzk2MzczNjQ5ODI5OA.Gvsc-_.YYtMPRyz-Q6zVU2R1-NNUpVkVcYdoJueDvU6Mw07999"
+token = "MTAyNTQyNzk2MzczNjQ5ODI5OA.Gvsc-_.YYtMPRyz-Q6zVU2R1-NNUpVkVcYdoJueDvU6Mw"
 intents = discord.Intents.all()
 intents.members = True
 
