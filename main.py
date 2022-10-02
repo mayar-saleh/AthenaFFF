@@ -17,44 +17,11 @@ token = os.environ.get("token")
 async def on_ready():
   print("Bot is ready")
 
-
-@client.event
-async def on_raw_reaction_add(payload):
-
-  channel = client.get_channel(payload.channel_id)
-
-  await channel.send(f'{payload.member} reacted {payload.emoji}')
-
-  message = await channel.fetch_message(payload.message_id)
-  reaction = get(message.reactions, emoji=payload.emoji.name)
-
-  if reaction.count >= 5 and str(payload.emoji) == "☣️":
-
-    await channel.send("=================")
-    await channel.send("=================")
-    await channel.send("=================")
-    await channel.send("#####CODE-RED#####")
-    await channel.send("=================")
-    await channel.send("=================")
-    await channel.send("=================")
-
-    for member in payload.member.guild.members:
-
-      try:
-
-        await member.send("https://discord.gg/dxMXpQxP")
-        await channel.send(f'{member} recieved invite.')
-
-      except:
-
-        await channel.send(f'{member} did NOT recieved invite.')
-
-
 @client.event
 async def on_message(ctx):
 
-  if str(ctx.content) == "#####CODE-RED#####":
-    await ctx.channel.send("ACTIVATING CODE RED.")
+  if str(ctx.content) == "Hello Athena":
+    await ctx.channel.send("Yo!")
 
     print(str(ctx.content))
 
