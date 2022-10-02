@@ -1,5 +1,4 @@
 discord.py
-threading
 flask
 python-dotenv
 PyNaCl
